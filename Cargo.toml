@@ -6,6 +6,7 @@ license = "MIT OR Apache-2.0"
 description = "Ergonomic functions to display a count of bytes to an end user."
 repository = "https://github.com/tyush/repr-bytes"
 authors = ["Yash Kumar <tyushk+git@gmail.com>"]
+keywords = ["format", "bytes", "pretty", "display"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
