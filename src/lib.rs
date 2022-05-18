@@ -129,11 +129,11 @@ impl Size {
     /// ```
     pub fn get_units(&self) -> Units {
         match self.0 {
-            x if x < 1000 => Units::Bytes,
-            x if x < 1000 ^ 2 => Units::Kilobytes,
-            x if x < 1000 ^ 3 => Units::Megabytes,
-            x if x < 1000 ^ 4 => Units::Gigabytes,
-            x if x < 1000 ^ 5 => Units::Terabytes,
+            x if x < 1000usize => Units::Bytes,
+            x if x < 1000usize.pow(2) => Units::Kilobytes,
+            x if x < 1000usize.pow(3) => Units::Megabytes,
+            x if x < 1000usize.pow(4) => Units::Gigabytes,
+            x if x < 1000usize.pow(5) => Units::Terabytes,
             _ => Units::Petabytes,
         }
     }
@@ -151,12 +151,12 @@ impl Size {
     /// ```
     pub fn get_si_units(&self) -> Units {
         match self.0 {
-            x if x < 1024 => Units::Bytes,
-            x if x < 1024 ^ 2 => Units::Kibibytes,
-            x if x < 1024 ^ 3 => Units::Mebibytes,
-            x if x < 1024 ^ 4 => Units::Gibibytes,
-            x if x < 1024 ^ 5 => Units::Tebibytes,
-            _ => Units::Petabytes,
+            x if x < 1024usize => Units::Bytes,
+            x if x < 1024usize.pow(2) => Units::Kibibytes,
+            x if x < 1024usize.pow(3) => Units::Mebibytes,
+            x if x < 1024usize.pow(4) => Units::Gibibytes,
+            x if x < 1024usize.pow(5) => Units::Tebibytes,
+            _ => Units::Pebibytes,
         }
     }
 
