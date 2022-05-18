@@ -7,9 +7,12 @@
 //! # use repr_size::*;
 //! let my_file_size = Size::from(54222);
 //!
-//! println!("{}", my_file_size); // "54.2 KB"
+//! println!("{}", my_file_size); // "54.2 kB"
+//! # assert_eq!("54.2 kB", my_file_size.to_string());
 //! println!("{}", my_file_size.to_si_string()); // "53.0 KiB"
+//! # assert_eq!("53.0 KiB", my_file_size.to_si_string());
 //! println!("{}", my_file_size.repr(Units::Bytes)); // "54222 B"
+//! # assert_eq!("54222.0 B", my_file_size.repr(Units::Bytes));
 //! ```
 //!
 //! # Features
