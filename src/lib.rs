@@ -4,7 +4,7 @@
 //!
 //! # Quickstart
 //! ```rust
-//! # use human_bytes::*;
+//! # use repr_size::*;
 //! let my_file_size = Size::from(54222);
 //!
 //! println!("{}", my_file_size); // "54.2 KB"
@@ -22,7 +22,7 @@ use std::fmt::Display;
 ///
 /// # Usage
 /// ```rust
-/// # use human_bytes::{Size, Units};
+/// # use repr_size::{Size, Units};
 /// let my_file_size = Size::from(2300);
 /// println!("{}", my_file_size); // 2.3 kB
 /// println!("{}", my_file_size.to_string()); // 2.3 kB
@@ -120,7 +120,7 @@ impl Size {
     ///
     /// # Usage
     /// ```rust
-    /// # use human_bytes::*;
+    /// # use repr_size::*;
     /// let just_over_one_kilobyte = Size::from(1001);
     /// let just_under_one_kilobyte = Size::from(999);
     ///
@@ -142,7 +142,7 @@ impl Size {
     ///
     /// # Usage
     /// ```rust
-    /// # use human_bytes::*;
+    /// # use repr_size::*;
     /// let just_over_one_kibibyte = Size::from(1025);
     /// let just_under_one_kibibyte = Size::from(1022);
     ///
@@ -177,7 +177,7 @@ impl Size {
     /// Returns a string representation of the size using
     /// the given unit of bytes.
     /// ```rust
-    /// # use human_bytes::*;
+    /// # use repr_size::*;
     /// let twenty_two_kb = Size::from(22000);
     ///
     /// println!("{}", twenty_two_kb.repr(Units::Bytes)); // "22000 B"
