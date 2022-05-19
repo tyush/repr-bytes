@@ -5,7 +5,6 @@ pretty, human readable sizes.
 
 ## Quickstart
 ```rust
-# use human_bytes::*;
 let my_file_size = Size::from(54222);
 
 println!("{}", my_file_size); // "54.2 KB"
