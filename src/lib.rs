@@ -71,14 +71,14 @@ impl Units {
             Self::Bytes => 1,
             Self::Kilobytes => 1000,
             Self::Kibibytes => 1024,
-            Self::Megabytes => 1000 ^ 2,
-            Self::Mebibytes => 1024 ^ 2,
-            Self::Gigabytes => 1000 ^ 3,
-            Self::Gibibytes => 1024 ^ 3,
-            Self::Terabytes => 1000 ^ 4,
-            Self::Tebibytes => 1024 ^ 4,
-            Self::Petabytes => 1000 ^ 5,
-            Self::Pebibytes => 1024 ^ 5,
+            Self::Megabytes => 1000usize.pow(2),
+            Self::Mebibytes => 1024usize.pow(2),
+            Self::Gigabytes => 1000usize.pow(3),
+            Self::Gibibytes => 1024usize.pow(3),
+            Self::Terabytes => 1000usize.pow(4),
+            Self::Tebibytes => 1024usize.pow(4),
+            Self::Petabytes => 1000usize.pow(5),
+            Self::Pebibytes => 1024usize.pow(5),
         }
     }
 }
